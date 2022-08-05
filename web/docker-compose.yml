@@ -1,0 +1,20 @@
+version: '3.2'
+services:
+  db:
+    image: mysql:5.7.4
+    environment:
+      - MYSQL_ROOT_DB_PASSWORD=password
+    ports:
+      - '3306:3306'
+  app:
+    image: adsnap/broker
+    environment:
+      - RAILS_ENV=development
+      - SECRET_KEY_BASE=test123abc
+    ports:
+      - '0.0.0.0:3000:3000'
+    command: bundle exec rails s -b 0.0.0.0
+
+
+volumes:
+  adsnap-db-data:

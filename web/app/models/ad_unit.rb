@@ -1,0 +1,2 @@
+class AdUnit < ApplicationRecord
+end
