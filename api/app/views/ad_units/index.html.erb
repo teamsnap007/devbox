@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ad Units</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpi</th>
+      <th>Url</th>
+      <th>Image url</th>
+      <th>Media url</th>
+      <th>Campaign</th>
+      <th>Name</th>
+      <th>Is active</th>
+      <th>Total impressions</th>
+      <th>Total conversions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ad_units.each do |ad_unit| %>
+      <tr>
+        <td><%= ad_unit.cpi %></td>
+        <td><%= ad_unit.url %></td>
+        <td><%= ad_unit.image_url %></td>
+        <td><%= ad_unit.media_url %></td>
+        <td><%= ad_unit.campaign_id %></td>
+        <td><%= ad_unit.name %></td>
+        <td><%= ad_unit.is_active %></td>
+        <td><%= ad_unit.total_impressions %></td>
+        <td><%= ad_unit.total_conversions %></td>
+        <td><%= link_to 'Show', ad_unit %></td>
+        <td><%= link_to 'Edit', edit_ad_unit_path(ad_unit) %></td>
+        <td><%= link_to 'Destroy', ad_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ad Unit', new_ad_unit_path %>

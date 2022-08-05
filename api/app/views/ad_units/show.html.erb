@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpi:</strong>
+  <%= @ad_unit.cpi %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @ad_unit.url %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @ad_unit.image_url %>
+</p>
+
+<p>
+  <strong>Media url:</strong>
+  <%= @ad_unit.media_url %>
+</p>
+
+<p>
+  <strong>Campaign:</strong>
+  <%= @ad_unit.campaign_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ad_unit.name %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @ad_unit.is_active %>
+</p>
+
+<p>
+  <strong>Total impressions:</strong>
+  <%= @ad_unit.total_impressions %>
+</p>
+
+<p>
+  <strong>Total conversions:</strong>
+  <%= @ad_unit.total_conversions %>
+</p>
+
+<%= link_to 'Edit', edit_ad_unit_path(@ad_unit) %> |
+<%= link_to 'Back', ad_units_path %>

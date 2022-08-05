@@ -1,0 +1,62 @@
+<%= form_with(model: ad_unit) do |form| %>
+  <% if ad_unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ad_unit.errors.count, "error") %> prohibited this ad_unit from being saved:</h2>
+
+      <ul>
+        <% ad_unit.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpi %>
+    <%= form.text_field :cpi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :media_url %>
+    <%= form.text_field :media_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :campaign_id %>
+    <%= form.number_field :campaign_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.check_box :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_impressions %>
+    <%= form.number_field :total_impressions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_conversions %>
+    <%= form.number_field :total_conversions %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
